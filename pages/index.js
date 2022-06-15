@@ -30,17 +30,22 @@ export default function Home({ initialAdvice }) {
 
       <main className="flex items-center justify-center h-full h-screen">
         <div className="relative flex flex-col items-center p-5 text-center rounded-lg shadow-2xl justify-evenly bg-darkGrayishBlue w-96 h-96">
-          <h1 className="text-neonGreen">Advice #{advice.slip.id}</h1>
-          <div className="flex items-center justify-center h-40">
-            <p className="text-2xl text-white">"{advice.slip.advice}"</p>
+          <h1 className="tracking-[0.5rem] text-neonGreen">
+            ADVICE #{advice.slip.id}
+          </h1>
+          <div className="flex items-center justify-center h-36">
+            <p className="text-2xl text-white">
+              &quot;{advice.slip.advice}&quot;
+            </p>
           </div>
           <Image src={divider} alt="" />
-          <button
+
+          <img
             onClick={handleClick}
-            className="absolute bottom-0 p-5 translate-y-1/2 rounded-full bg-slate-400"
-          >
-            Generate Random
-          </button>
+            className="absolute bottom-0 p-5 translate-y-1/2 rounded-full cursor-pointer bg-neonGreen hover:shadow-[0px_0px_20px_0px_hsl(150,100%,66%)]"
+            src="/icon-dice.svg"
+            alt=""
+          />
         </div>
       </main>
     </div>
