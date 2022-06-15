@@ -29,7 +29,7 @@ export default function Home({ initialAdvice }) {
       </Head>
 
       <main className="flex items-center justify-center h-full h-screen">
-        <div className="flex flex-col items-center p-5 text-center rounded-lg shadow-2xl justify-evenly bg-darkGrayishBlue w-96 h-96">
+        <div className="relative flex flex-col items-center p-5 text-center rounded-lg shadow-2xl justify-evenly bg-darkGrayishBlue w-96 h-96">
           <h1 className="text-neonGreen">Advice #{advice.slip.id}</h1>
           <div className="flex items-center justify-center h-40">
             <p className="text-2xl text-white">"{advice.slip.advice}"</p>
@@ -37,7 +37,7 @@ export default function Home({ initialAdvice }) {
           <Image src={divider} alt="" />
           <button
             onClick={handleClick}
-            className="p-5 rounded-full bg-slate-400"
+            className="absolute bottom-0 p-5 translate-y-1/2 rounded-full bg-slate-400"
           >
             Generate Random
           </button>
